@@ -6,20 +6,20 @@ export default function Home() {
   const [password, setPassword] = useState("");
 
   const whatsappLink = "https://chat.whatsapp.com/KrAq2hk2bQB2px9QaoNLVe";
-  const payfastBasic = "https://payfast.io/basic";
-  const payfastStandard = "https://payfast.io/standard";
-  const payfastPremium = "https://payfast.io/premium";
+  const payfastBasic = "#";   // replace with your real link
+  const payfastStandard = "#"; 
+  const payfastPremium = "#"; 
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(username === "user" && password === "1234") {
+    if (username === "user" && password === "1234") {
       setLoggedIn(true);
     } else {
       alert("Invalid credentials");
     }
   };
 
-  if(!loggedIn) {
+  if (!loggedIn) {
     return (
       <div style={{ textAlign: "center", padding: 40, background: "#111", color: "#fff", minHeight: "100vh" }}>
         <h1>GOATEDFM Forex Academy</h1>
@@ -48,7 +48,7 @@ export default function Home() {
       <div style={{ display: "flex", flexWrap: "wrap", gap: 20, justifyContent: "center", marginTop: 20 }}>
         <div style={{ border: "1px solid #444", padding: 16, borderRadius: 12, width: 200, textAlign: "center" }}>
           <h3>Exclusive Courses</h3>
-          <ul>
+          <ul style={{ paddingLeft: 0, listStyle: "none" }}>
             <li>Beginner Forex</li>
             <li>Technical Analysis</li>
             <li>Risk Management</li>
@@ -78,4 +78,4 @@ export default function Home() {
       </footer>
     </div>
   );
-)
+              }
